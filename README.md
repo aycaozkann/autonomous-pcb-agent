@@ -7,7 +7,7 @@
 **🔒 This repository is a portfolio summary. The source code is private —
 see [Why closed source](#why-closed-source) below.**
 
-📬 Contact: `[add your email / LinkedIn here before publishing]`
+📬 Contact: [ozkanayca8@gmail.com](mailto:ozkanayca8@gmail.com) · [LinkedIn](https://www.linkedin.com/in/ay%C3%A7a-%C3%B6zkan-0a2265195)
 🗂 Live roadmap: see the **Projects** tab on this repository.
 
 ---
