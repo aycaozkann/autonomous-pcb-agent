@@ -60,6 +60,23 @@ için geçmiş hatalarının kalıcı bir hafızasını tutar.
 - Kendi otomatik CLI'sı ve test paketine sahip üretim çıktısı üretimi
   (Gerber / BOM / CPL)
 
+**Birleşik CLI, raporlama ve teslim (en yeni katman)**
+- Tüm doğrulama/üretim araçlarını tek bir komut satırı arayüzünde toplayan
+  birleşik CLI katmanı
+- Tek bir ortak veri modelinden JSON + HTML + PDF olarak üretilen, iki
+  dilli (TR/EN) birleşik tasarım-doğrulama raporu — DRC, ERC, mekanik
+  anahat, güç bütünlüğü ve araç-bağlantı sağlığını tek başlık altında
+  toplar
+- Müşteri teslim paketleyicisi: git çalışma ağacı temizliği ve
+  revizyon-etiket eşleşmesi gibi build kapıları + paket içeriğini tarayıp
+  herhangi bir iç kaynak kodu/kimlik bilgisi izi bulursa **paketi
+  otomatik olarak silen** zorunlu bir gizlilik taraması + SHA-256 tabanlı
+  bütünlük manifestosu
+- Kapalı-form empedans/pad-boyutu formüllerini bağımsız kaynaklara (KiCad'in
+  kendi resmi footprint kütüphanesi dahil) karşı doğrulayan referans-değer
+  test paketi, artı sabit bir kart geometrisine karşı regresyon yakalayan
+  altın-standart (golden) test paketi
+
 **Ajan altyapısı**
 - Ajanın otonom olarak neyi değiştirebileceğini sınırlayan yönetilen bir
   "güvenli yazma" katmanı
@@ -108,6 +125,11 @@ anındaki özet aşağıdadır:
 | ✅ Tamamlandı | Üretim çıktısı üretimi (Gerber/BOM/CPL) |
 | ✅ Tamamlandı | Bağımsız ikinci-görüş doğrulama katmanı |
 | ✅ Tamamlandı | Kalıcı proje hafızası / karar kaydı |
+| ✅ Tamamlandı | Birleşik CLI (tüm doğrulama/üretim araçları tek arayüzde) |
+| ✅ Tamamlandı | Çok formatlı (JSON/HTML/PDF), iki dilli birleşik doğrulama raporu |
+| ✅ Tamamlandı | Zorunlu gizlilik taramalı müşteri teslim paketleyicisi |
+| ✅ Tamamlandı | Bağımsız kaynaklara karşı doğrulanan empedans/pad referans testleri |
+| ✅ Tamamlandı | Sabit kart geometrisine karşı regresyon (golden) test paketi |
 | 🚧 Devam ediyor | Diferansiyel çift routing |
 | 🚧 Devam ediyor | 3D çarpışma farkında routing (A* yol bulma) |
 | 🚧 Devam ediyor | Netclass doğrulama katmanı |
@@ -115,16 +137,20 @@ anındaki özet aşağıdadır:
 | 📋 Planlandı | Hata hafızasının otonom hatta otomatik bağlanması |
 | 📋 Planlandı | Mevcut yetenek envanteri sonrası bir sonraki büyük faz |
 
-**Test kapsamı:** 490 test; bilinen 32 test başarısızlığı Windows'a özgü,
-koddan bağımsız bir ortam sorunundan kaynaklanıyor ve ayrı olarak takip
-ediliyor (iç denetim, 2026-09-03 itibarıyla).
+**Test kapsamı:** 3973 test (tam takım, iç denetim 2026-09-30) + birleşik
+teslim-paketi katmanının 6 yeni testi (ayrıca doğrulandı) — sıfır bilinen
+başarısızlık. Önceki 490 test/32 bilinen hata rakamı (2026-09-03) bu
+oturumdaki genişletme ve iyileştirme çalışmasıyla güncellenmiştir.
 
 ### Teknoloji yığını
 
 Python · KiCad Python API (`pcbnew`) · ngspice (SPICE simülasyon köprüsü) ·
-Freerouting (otonom routing motoru) · pytest (test odaklı geliştirme — her
-modülün kendi test paketi var) · `uv` (bağımlılık/ortam yönetimi) ·
-GitHub Actions (CI: sözdizimi kontrolleri, tam test paketi, smoke testleri)
+Freerouting (otonom routing motoru) · pytest + `unittest` (test odaklı
+geliştirme — her modülün kendi test paketi var) · Typer + Pydantic
+(birleşik CLI ve yapılandırma doğrulama) · ReportLab (PDF rapor/teslim notu
+üretimi) · `uv` (bağımlılık/ortam yönetimi) · GitHub Actions (CI: sözdizimi
+kontrolleri, tip kontrolü, tam test paketi, gerçek KiCad Docker imajında
+regresyon)
 
 ### Örnek Çıktılar
 
@@ -135,6 +161,36 @@ GitHub Actions (CI: sözdizimi kontrolleri, tam test paketi, smoke testleri)
 - **PCB 3D render / gerber görseli** — `images/pcb-3d-render.png`
 - **DRC/ERC rapor özeti (görsel)** — `images/drc-erc-ozet.png`
 - **Terminal/CLI çıktı ekran görüntüsü** — `images/cli-output.png`
+- **Ajan çalışırken (demo GIF)** — `images/demo.gif`
+- **Birleşik doğrulama raporu (HTML/PDF ekran görüntüsü)** — `images/rapor-ekrani.png`
+
+### Vaka Çalışması: Akıllı Vampir-Güç Kesici Kart
+
+<!-- TODO: bu bölüm bir ŞABLONdur. Hiçbir rakam/metrik UYDURULMADI - gerçek
+     kart üretilip ölçülene kadar tüm sayısal alanlar bilerek BOŞ bırakıldı.
+     Doldurulacak yerler [ ] içinde işaretli. -->
+
+ESP32 tabanlı, şebekeden galvanik olarak izole edilmiş, röle üzerinden
+yükü kesebilen bir "akıllı vampir-güç" kartı — bekleme modundaki (vampir)
+güç tüketimini algılayıp otomatik olarak kesen bir cihaz. Ajanın uçtan uca
+akışını (şematik → doğrulama → yerleşim → routing → DFM/EMC → bağımsız
+denetim → üretim çıktısı) tek, somut bir donanım üzerinde göstermek için
+seçildi.
+
+**Tasarım kısıtları**
+- Şebeke tarafı ile ESP32/kontrol tarafı arasında galvanik izolasyon
+  (izolasyon mesafesi ve creepage/clearance IPC-2221'e göre doğrulanır)
+- Röle sürücü devresi + geri-EMK koruması
+- Güç tüketim ölçümü (akım/gerilim sensörü) ile gerçek zamanlı vampir-yük
+  tespiti
+
+**Sonuçlar** *(kart üretilip ölçülene kadar doldurulmayacak)*
+- Toplam otonom iterasyon sayısı: `[ ]`
+- Şematikten ilk DRC-temiz yerleşime kadar geçen süre: `[ ]`
+- Bağımsız denetçinin yakaladığı, ajanın kendi raporunda görünmeyen bulgu
+  sayısı: `[ ]`
+- Üretilen kartın gerçek ölçüm sonuçları (izolasyon mesafesi, termal,
+  vampir-yük algılama doğruluğu): `[ ]`
 
 ### Neden kapalı kaynak
 
@@ -152,14 +208,42 @@ requirements/datasheet intake through schematic capture, placement,
 routing, and manufacturing outputs — gating every phase behind an
 independent, automated verification step (ERC, netlist diffing, SPICE,
 DFM/EMC checks, a second-opinion auditor) and keeping a persistent memory
-of past errors across sessions. Schematic verification, footprint
-generation, auto-placement, DFM/EMC checks, manufacturing output
-generation, and the second-opinion verification layer are done;
-differential-pair routing, 3D collision-aware routing, netclass
-validation, and expanded safe-write governance are in progress (490 tests;
-32 known failures tied to a Windows-specific, code-independent environment
-issue, tracked separately). Stack:
-Python, the KiCad Python API, ngspice, Freerouting, pytest, `uv`, GitHub
-Actions. The source code is private; this repository is a portfolio
-summary only — see "Neden kapalı kaynak" above for why, or reach out via
-the contact links above for a code walkthrough.
+of past errors across sessions. On top of the design-flow engine, a
+unified CLI layer now ties every validation/production tool into one
+interface: a single-model, bilingual (TR/EN) validation report rendered as
+JSON/HTML/PDF, and a customer delivery-package builder with build gates
+(clean working tree, revision-tag match) plus a MANDATORY post-build
+privacy scan that deletes the package outright if it finds any leaked
+internal source or credential pattern. A reference-value test suite
+validates the closed-form impedance/pad-size formulas against independent
+sources (including KiCad's own official footprint library), and a golden
+regression suite pins checker behaviour against fixed board geometry.
+
+Schematic verification, footprint generation, auto-placement, DFM/EMC
+checks, manufacturing output generation, the second-opinion verification
+layer, the unified CLI/report/delivery layer, and the reference/golden
+test suites are done; differential-pair routing, 3D collision-aware
+routing, netclass validation, and expanded safe-write governance are in
+progress (3973 full-suite tests plus 6 further tests for the delivery
+layer, verified separately — zero known failures as of this update; the
+previous "490 tests / 32 known failures" figure predates this round of
+work). Stack: Python, the KiCad Python API, ngspice, Freerouting, pytest +
+`unittest`, Typer + Pydantic (unified CLI/config), ReportLab (PDF
+generation), `uv`, GitHub Actions (lint, type-check, full test suite, and
+a real-KiCad-Docker regression job). The source code is private; this
+repository is a portfolio summary only — see "Neden kapalı kaynak" above
+for why, or reach out via the contact links above for a code walkthrough.
+
+### Case Study: Smart Vampire-Power Cutoff Card
+
+An ESP32-based, mains-isolated card that switches a load via relay — it
+detects standby ("vampire") power draw and cuts it automatically. Chosen
+to demonstrate the agent's full flow (schematic → verification → placement
+→ routing → DFM/EMC → independent audit → manufacturing outputs) on one
+concrete board. Constraints: galvanic isolation between the mains and
+control sides (creepage/clearance checked against IPC-2221), a relay
+driver with back-EMF protection, and real-time load sensing. **No numbers
+are fabricated here** — iteration count, time-to-first-clean-layout,
+auditor-caught-findings count, and the built board's own measurements
+(isolation distance, thermal, detection accuracy) are left blank until a
+real board exists to measure.
