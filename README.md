@@ -137,10 +137,15 @@ anındaki özet aşağıdadır:
 | 📋 Planlandı | Hata hafızasının otonom hatta otomatik bağlanması |
 | 📋 Planlandı | Mevcut yetenek envanteri sonrası bir sonraki büyük faz |
 
-**Test kapsamı:** 3973 test (tam takım, iç denetim 2026-09-30) + birleşik
-teslim-paketi katmanının 6 yeni testi (ayrıca doğrulandı) — sıfır bilinen
-başarısızlık. Önceki 490 test/32 bilinen hata rakamı (2026-09-03) bu
-oturumdaki genişletme ve iyileştirme çalışmasıyla güncellenmiştir.
+**Test kapsamı:** 4092 test, TEK bir tam koşumda doğrulandı (2026-09-30) —
+3989 geçti, 103 atlandı (ortam bağımlılığı gerektiren testler; örn. canlı
+bir KiCad IPC oturumu), 0 başarısız / 0 hata. Bir önceki "3973 test, sıfır
+bilinen başarısızlık" rakamı iki ayrı koşumun birleşiminden geliyordu; bir
+iç denetim bu birleşimin gerçek bir test-izolasyonu hatasını (Windows'ta
+paylaşılan sabit geçici dosya adları) gizlediğini ortaya çıkardı, hata
+bulunup düzeltildi ve rakam tek bir koşumdan yeniden üretildi. Önceki 490
+test/32 bilinen hata rakamı (2026-09-03) bu oturumdaki genişletme ve
+iyileştirme çalışmasıyla güncellenmiştir.
 
 ### Teknoloji yığını
 
@@ -224,10 +229,15 @@ checks, manufacturing output generation, the second-opinion verification
 layer, the unified CLI/report/delivery layer, and the reference/golden
 test suites are done; differential-pair routing, 3D collision-aware
 routing, netclass validation, and expanded safe-write governance are in
-progress (3973 full-suite tests plus 6 further tests for the delivery
-layer, verified separately — zero known failures as of this update; the
-previous "490 tests / 32 known failures" figure predates this round of
-work). Stack: Python, the KiCad Python API, ngspice, Freerouting, pytest +
+progress (4092 full-suite tests verified in a single run as of 2026-09-30
+— 3989 passed, 103 skipped (environment-dependent tests, e.g. ones
+needing a live KiCad IPC session), 0 failed / 0 errors. The earlier
+"3973 tests, zero known failures" figure combined two separate runs; an
+internal audit found that combination was hiding a real test-isolation
+bug (shared, fixed temp filenames racing on Windows), which has since
+been found, fixed, and re-verified in one single run. The previous "490
+tests / 32 known failures" figure predates this round of work). Stack:
+Python, the KiCad Python API, ngspice, Freerouting, pytest +
 `unittest`, Typer + Pydantic (unified CLI/config), ReportLab (PDF
 generation), `uv`, GitHub Actions (lint, type-check, full test suite, and
 a real-KiCad-Docker regression job). The source code is private; this
