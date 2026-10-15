@@ -1,0 +1,6 @@
+"Reference","Value","Footprint","Qty","MPN","Manufacturer","LCSC"
+"C1","100nF","Capacitor_SMD:C_0603_1608Metric","1","CC0603KRX7R9BB104","Yageo","C14663"
+"J1","Conn_01x06","Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical","1","2.54-1x6P (generic)","Generic/Various (jenerik, birbirinin yerine kullanılabilir)","C37208"
+"R1,R2","4.7k","Resistor_SMD:R_0603_1608Metric","2","RC0603FR-074K7L","Yageo","C99782"
+"R3","10k","Resistor_SMD:R_0603_1608Metric","1","RC0603FR-0710KL","Yageo","C98220"
+"U1","SHT35-DIS","Sensor_Humidity:Sensirion_DFN-8-1EP_2.5x2.5mm_P0.5mm_EP1.1x1.7mm","1","SHT35-DIS-B2.5KS","Sensirion","C90161"

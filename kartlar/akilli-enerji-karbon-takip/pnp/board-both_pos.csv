@@ -1,0 +1,18 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C1","1uF","C_Disc_D5.0mm_W2.5mm_P2.50mm",100.000000,-78.000000,0.000000,top
+"C2","100nF","C_Disc_D3.0mm_W1.6mm_P2.50mm",91.000000,-41.010000,0.000000,top
+"D1","1N5819","D_DO-41_SOD81_P10.16mm_Horizontal",70.000000,-38.000000,0.000000,top
+"F1","3.15A 250V hizli atan (5x20mm)","Fuseholder_Cylinder-5x20mm_Bulgin_FX0456_Vertical_Closed",30.000000,-20.000000,0.000000,top
+"J1","AC Giris (L,N)","TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm",12.000000,-20.000000,0.000000,top
+"J2","AC Cikis / Yuk (L,N)","TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm",50.000000,-85.000000,0.000000,top
+"J3","UART Programlama Header","PinHeader_1x06_P2.54mm_Vertical",150.000000,-66.000000,0.000000,top
+"R1","10k","R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",100.000000,-70.000000,0.000000,top
+"R2","10k","R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",125.000000,-70.000000,0.000000,top
+"R3","1k","R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",70.000000,-32.000000,0.000000,top
+"SW1","EN Reset","SW_PUSH_6mm",100.000000,-86.000000,0.000000,top
+"SW2","BOOT","SW_PUSH_6mm",125.000000,-86.000000,0.000000,top
+"U1","ESP32-WROOM-32E","ESP32-WROOM-32E",120.000000,-45.000000,0.000000,top
+"U2","ACS712-05B breakout modul","PinHeader_1x05_P2.54mm_Vertical",50.000000,-58.000000,0.000000,top
+"U3","5V role modulu (SRD-05VDC-SL-C tabanli)","PinHeader_1x06_P2.54mm_Vertical",12.000000,-58.000000,0.000000,top
+"U4","HLK-PM01","PinHeader_1x04_P2.54mm_Vertical",12.000000,-38.000000,0.000000,top
+"U5","AMS1117-3.3 breakout modul","PinHeader_1x03_P2.54mm_Vertical",70.000000,-20.000000,0.000000,top

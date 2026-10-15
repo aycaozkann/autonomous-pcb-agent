@@ -1,0 +1,545 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-15T01:00:53",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.4",
+    "schematic_parity": [
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Dielectric'",
+            "items": [
+                {
+                    "description": "Ayak İzi C1",
+                    "pos": {
+                        "x": 9.425,
+                        "y": 12.0
+                    },
+                    "uuid": "6d2b6efc-cc1d-4934-a393-cb269517ea94"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (+5V), şematik tarafından verilen ağla (/+5V) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1 için [+5V] C1 ayak F.Cu",
+                    "pos": {
+                        "x": 9.425,
+                        "y": 11.225
+                    },
+                    "uuid": "551e686e-019a-460e-90a0-8a40a04de1e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GND), şematik tarafından verilen ağla (/GND) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2 için [GND] C1 ayak F.Cu",
+                    "pos": {
+                        "x": 9.425,
+                        "y": 12.775
+                    },
+                    "uuid": "d3adbf07-d02b-46b8-9387-85f02fd896e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Eksik ayak izi FLG1 (PWR_FLAG)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Eksik ayak izi FLG2 (PWR_FLAG)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi J1",
+                    "pos": {
+                        "x": 1.9,
+                        "y": 2.5
+                    },
+                    "uuid": "0b9aac7a-e0ec-4cab-8220-d5d1219acc86"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (+5V), şematik tarafından verilen ağla (/+5V) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [+5V] J1",
+                    "pos": {
+                        "x": 1.9,
+                        "y": 2.5
+                    },
+                    "uuid": "78962550-6893-4133-b5a3-578ebb11ba15"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GND), şematik tarafından verilen ağla (/GND) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [GND] J1",
+                    "pos": {
+                        "x": 4.44,
+                        "y": 2.5
+                    },
+                    "uuid": "2af3b9ed-3453-4d98-8d04-4b9343403e46"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (I2C_SDA), şematik tarafından verilen ağla (/I2C_SDA) eşleşmiyor",
+            "items": [
+                {
+                    "description": "3'in Delik İçi Kaplamalı Geçit pedi [I2C_SDA] J1",
+                    "pos": {
+                        "x": 6.98,
+                        "y": 2.5
+                    },
+                    "uuid": "476b3292-a59d-4b7f-b816-803bec9ea359"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (I2C_SCL), şematik tarafından verilen ağla (/I2C_SCL) eşleşmiyor",
+            "items": [
+                {
+                    "description": "4'in Delik İçi Kaplamalı Geçit pedi [I2C_SCL] J1",
+                    "pos": {
+                        "x": 9.52,
+                        "y": 2.5
+                    },
+                    "uuid": "fd86b691-eb85-41c2-aee5-2d4605f71e6f"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (SHT_NRESET), şematik tarafından verilen ağla (/SHT_NRESET) eşleşmiyor",
+            "items": [
+                {
+                    "description": "5'in Delik İçi Kaplamalı Geçit pedi [SHT_NRESET] J1",
+                    "pos": {
+                        "x": 12.06,
+                        "y": 2.5
+                    },
+                    "uuid": "d24b4bdd-0077-48b2-ab77-ce08650456f3"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (SHT_ALERT), şematik tarafından verilen ağla (/SHT_ALERT) eşleşmiyor",
+            "items": [
+                {
+                    "description": "6'in Delik İçi Kaplamalı Geçit pedi [SHT_ALERT] J1",
+                    "pos": {
+                        "x": 14.6,
+                        "y": 2.5
+                    },
+                    "uuid": "b018171c-6be9-4dc2-9684-8a92cd0975bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi R1",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 6.5
+                    },
+                    "uuid": "9bff4f2d-9343-43d3-83ff-555a49360edb"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (+5V), şematik tarafından verilen ağla (/+5V) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1 için [+5V] R1 ayak F.Cu",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 7.325
+                    },
+                    "uuid": "80be435f-3c2b-4a7b-9ac3-90a1c3c345e2"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (I2C_SDA), şematik tarafından verilen ağla (/I2C_SDA) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2 için [I2C_SDA] R1 ayak F.Cu",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 5.675
+                    },
+                    "uuid": "167ea15a-8969-4161-9e2e-738c189abe19"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi R2",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 12.8
+                    },
+                    "uuid": "990f8e03-effb-45a6-9afc-592b55cc8e22"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (+5V), şematik tarafından verilen ağla (/+5V) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1 için [+5V] R2 ayak F.Cu",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 13.625
+                    },
+                    "uuid": "14d724fd-294a-40f0-abf3-df499c20f3c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (I2C_SCL), şematik tarafından verilen ağla (/I2C_SCL) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2 için [I2C_SCL] R2 ayak F.Cu",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 11.975
+                    },
+                    "uuid": "516d30f6-0515-435c-a31e-63af8959d424"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi R3",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 9.5
+                    },
+                    "uuid": "c8a485cc-0111-4445-b2e3-ff59b763e99c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (I2C_ADDR), şematik tarafından verilen ağla (/I2C_ADDR) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1 için [I2C_ADDR] R3 ayak F.Cu",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 10.325
+                    },
+                    "uuid": "209a0b57-2104-4a30-98b2-413f43609ddf"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GND), şematik tarafından verilen ağla (/GND) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2 için [GND] R3 ayak F.Cu",
+                    "pos": {
+                        "x": 4.0,
+                        "y": 8.675
+                    },
+                    "uuid": "2e3c7be5-73a8-47f7-b84e-42dd00c6cfa2"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi U1",
+                    "pos": {
+                        "x": 8.25,
+                        "y": 9.0
+                    },
+                    "uuid": "1428ea84-6655-4f47-99d2-c1cdac060823"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (I2C_SDA), şematik tarafından verilen ağla (/I2C_SDA) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1 için [I2C_SDA] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 7.075,
+                        "y": 8.25
+                    },
+                    "uuid": "bcec0dc3-cefc-474e-ae90-b40982d94358"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (I2C_ADDR), şematik tarafından verilen ağla (/I2C_ADDR) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2 için [I2C_ADDR] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 7.075,
+                        "y": 8.75
+                    },
+                    "uuid": "7cc679f9-7aa0-490d-9742-fb8cb0fed8fd"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (SHT_ALERT), şematik tarafından verilen ağla (/SHT_ALERT) eşleşmiyor",
+            "items": [
+                {
+                    "description": "3 için [SHT_ALERT] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 7.075,
+                        "y": 9.25
+                    },
+                    "uuid": "e2db53f4-06e7-42ff-a299-73c460bc4f4c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (I2C_SCL), şematik tarafından verilen ağla (/I2C_SCL) eşleşmiyor",
+            "items": [
+                {
+                    "description": "4 için [I2C_SCL] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 7.075,
+                        "y": 9.75
+                    },
+                    "uuid": "4cf3a436-8ac3-4c2a-a5af-a8d4a8da11c3"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (+5V), şematik tarafından verilen ağla (/+5V) eşleşmiyor",
+            "items": [
+                {
+                    "description": "5 için [+5V] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 9.425,
+                        "y": 9.75
+                    },
+                    "uuid": "a122c414-6e4c-49cc-a351-13dbb4db4fe6"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (SHT_NRESET), şematik tarafından verilen ağla (/SHT_NRESET) eşleşmiyor",
+            "items": [
+                {
+                    "description": "6 için [SHT_NRESET] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 9.425,
+                        "y": 9.25
+                    },
+                    "uuid": "5641d826-bb4b-4160-9bf0-014208824970"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GND), şematik tarafından verilen ağla (/GND) eşleşmiyor",
+            "items": [
+                {
+                    "description": "7 için [GND] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 9.425,
+                        "y": 8.75
+                    },
+                    "uuid": "53080366-bcf1-4ec1-adfb-530f832bcd3d"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GND), şematik tarafından verilen ağla (/GND) eşleşmiyor",
+            "items": [
+                {
+                    "description": "8 için [GND] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 9.425,
+                        "y": 8.25
+                    },
+                    "uuid": "50678eb3-e91c-47d3-ab77-479e5f7b544b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GND), şematik tarafından verilen ağla (/GND) eşleşmiyor",
+            "items": [
+                {
+                    "description": "9 için [GND] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 8.25,
+                        "y": 9.0
+                    },
+                    "uuid": "f659dcb3-43ab-42d9-9eb8-ef5e849cbc1b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Ayak İzi TP1",
+                    "pos": {
+                        "x": 15.0,
+                        "y": 8.0
+                    },
+                    "uuid": "283a22bb-0032-4f76-a82c-51cafd037dbb"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Ayak İzi MH2",
+                    "pos": {
+                        "x": 14.0,
+                        "y": 17.5
+                    },
+                    "uuid": "48c7675a-1066-44e0-8726-d32a3dd8d590"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Ayak İzi TP2",
+                    "pos": {
+                        "x": 15.0,
+                        "y": 11.0
+                    },
+                    "uuid": "58a9dcc4-408c-4121-ab8f-24c91597a8ed"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Ayak İzi MH1",
+                    "pos": {
+                        "x": 2.5,
+                        "y": 17.5
+                    },
+                    "uuid": "8336c26f-7a1e-4ec8-b84d-e0c467c11c32"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        }
+    ],
+    "source": "SHT35_Breakout.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}

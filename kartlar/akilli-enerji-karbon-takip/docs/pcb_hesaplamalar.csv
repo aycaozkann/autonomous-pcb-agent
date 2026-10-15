@@ -1,0 +1,23 @@
+kategori,buyukluk,deger,birim,kaynak,not
+akim,AC hatti tasarim akimi,3.15,A,F1 sigorta degeri (3.15A hizli atan),sigorta = tasarim tavani
+akim,"AC hatti min iz genisligi (dis, 2oz, dT=10C)",0.7353,mm,trace_width.py (IPC-2152/IPC-2221 cekirdek) - bu kosuda uretildi,ekran gercegi: ipc-calc-report/v1
+akim,AC hatti SECILEN iz genisligi,1.5,mm,gen_pcb.py::TRACK_WIDTH_MM,min degerin 2.04x'i - pratik/mekanik marj
+akim,+5V/+3V3 tasarim akimi (varsayim),1.0,A,"Faz 1 karari: WiFi TX tepe + marj (ESP32 tipik ortalama <200mA, tepe ~500mA; AMS1117 Iin~=Iout oldugu icin 5V tarafi da bu buyuklukte)",VARSAYIM - gercek akim olculmedi
+akim,"+5V/+3V3 min iz genisligi (dis, 1oz, dT=10C)",0.3021,mm,trace_width.py - bu kosuda uretildi,
+akim,+5V/+3V3 SECILEN iz genisligi,0.7,mm,gen_pcb.py::TRACK_WIDTH_MM,min degerin 2.32x'i
+akim,Dijital/analog sinyal SECILEN iz genisligi,0.4,mm,gen_pcb.py::DEFAULT_TRACK_WIDTH_MM,"mA seviyesi, akim-turetilmis DEGIL - fab/gurultu pratik minimumu"
+izolasyon,"IPC-2221B Tablo 6-1 min clearance/creepage (220V, dis, kaplanmamis)",0.4,mm,clearance.py - bu kosuda uretildi,confidence=conservative_assumption
+izolasyon,SECILEN HV<->LV mesafesi,4.0,mm,Faz 0 karari + ACS712/Allegro pekistirilmis izolasyon spesifikasyonu,"IPC-2221B tablo degerinin (0.4mm) 10.0x'i - ACS712'nin kendi reinforced-isolation spesifikasyonu IPC tablosundan DAHA SIKI, GEVSETILMEDI"
+izolasyon,OLCULEN HV<->LV mesafesi (pcbnew bbox),23.625,mm,TEST/pcb_yerlesim_raporu.md (bagimsiz pcbnew sorgusu),hedefin (4.0mm) 5.9x'i
+zamanlama,EN RC zaman sabiti (tau=R1*C1),10.0,ms,"uretim/bom/board-bom.csv: R1=10k, C1=1uF - bu kosuda hesaplandi",ESP32 EN pini guc-up reset gecikmesi
+koruma,"ACS712-05B cikis swing (VCC=5V, tam olcek)",0.5 - 4.5,V,"ACS712 ailesi genel cikis swing spesifikasyonu (datasheet, bu oturumda dogrulanmadi - Faz 3.2 bulgusunda kullanilan deger)",VCC/2 +- duyarlilik*Ipeak
+koruma,ESP32-WROOM-32E GPIO mutlak maksimum,VDD3P3 + 0.3,V,Espressif ESP32 datasheet (Faz 3.2 bulgusunda atifli),
+koruma,R3 seri direnc (akim sinirlama),1000.0,ohm,uretim/bom/board-bom.csv,"deger=1k, MPN CR1/4W-1K, LCSC C2894606"
+koruma,"D1 (1N5819, LCSC C2474/MDD) VF @ 1.0A - DATASHEET GARANTILI DEGER",0.6,V,"MDD 1N5819 datasheet (Maximum Ratings tablosu, bu oturumda indirilip okundu: microdiode.com, LCSC C2474 uzerinden)",onceki turda VARSAYIM olarak isaretliydi (0.40-0.55V araligi) - artik gercek datasheet degeri
+koruma,"Fault akimi (I=(5V-3.3V-Vf)/R3, yakinsayana kadar)",1.279,mA,"bu hesap (iteratif, D1 datasheet VF@1A'dan ideal-diyot egimiyle ekstrapole)","n~=1.05 varsayimi (tipik Schottky) - datasheet dusuk-akim VF egrisini (Fig.3) SAYISAL olarak vermiyor, 'sadece referans' notuyla cizim olarak veriyor"
+koruma,D1 VF @ fault akiminda (ekstrapole),0.421,V,bu hesap,0.6V - log10(1A/1.279mA)*62mV/dekad
+koruma,Klemp sonrasi U1 ADC girisi tavani (+3V3 + Vf),3.721,V,bu hesap: 3.3V nominal + ekstrapole D1 VF,"ESP32 mutlak maks sinirinin (VDD3P3+0.3V, tipik ~3.6V) USTUNDE - pratikte D1 iletime gecince akim R3 uzerinden sinirlanir ama marj DAR, ACIK MADDE olarak kalmaya devam ediyor (bkz. pin_baglanti_tablosu.md SS5) - artik VARSAYIM DEGIL, datasheet-turevli hesap"
+termal,HLK-PM01 en yuksek guc dagitan bilesen (Faz 5 nitel bulgu),-,-,TEST/faz5_termal_emi.md,"kendi potlanmis modulu icinde - kart uzerinde ayrik RthJA verisi YOK (bare IC degil, hazir modul) - azaltim yontemi: FIZIKSEL MESAFE (asagida)"
+termal,SECILEN HLK-PM01<->ACS712 mesafesi,15 - 20,mm,Faz 5 termal bulgusu (ACS712 sicaklik driftini azaltmak icin),
+termal,OLCULEN HLK-PM01<->ACS712 mesafesi (pcbnew bbox),35.515,mm,TEST/pcb_yerlesim_raporu.md (bagimsiz pcbnew sorgusu),hedef araligin ustunde
+mesafe,C2 (decoupling) <-> U1 pin2 (+3V3) mesafesi,17.75,mm,TEST/pcb_yerlesim_raporu.md (bagimsiz pcbnew sorgusu),"F.Courtyard (RF keep-clear, DRC zorlamiyor ama resmi modul tavsiyesi) sinirina ~0.84mm - KASITLI olarak yaklastirilmadi (2026-09-28 karari)"

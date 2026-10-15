@@ -1,0 +1,1088 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-15T01:02:12",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.4",
+    "schematic_parity": [
+        {
+            "description": "C_Disc_D5.0mm_W2.5mm_P2.50mm, sembol tarafından verilen ayak iziyle (Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi C1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 78.0
+                    },
+                    "uuid": "a682218d-588d-4407-9339-327726b5b5e3"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi C1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 78.0
+                    },
+                    "uuid": "a682218d-588d-4407-9339-327726b5b5e3"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (EN), şematik tarafından verilen ağla (/EN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [EN] C1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 78.0
+                    },
+                    "uuid": "63d7e74c-34c7-484e-9bd5-9dee1007f6de"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "C_Disc_D3.0mm_W1.6mm_P2.50mm, sembol tarafından verilen ayak iziyle (Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi C2",
+                    "pos": {
+                        "x": 91.0,
+                        "y": 41.01
+                    },
+                    "uuid": "9e31d3e0-f6e0-44e0-97bf-f876291675c4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi C2",
+                    "pos": {
+                        "x": 91.0,
+                        "y": 41.01
+                    },
+                    "uuid": "9e31d3e0-f6e0-44e0-97bf-f876291675c4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "D_DO-41_SOD81_P10.16mm_Horizontal, sembol tarafından verilen ayak iziyle (Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi D1",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 38.0
+                    },
+                    "uuid": "9f0a6f8a-565b-4460-94e7-43053ca689d9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi D1",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 38.0
+                    },
+                    "uuid": "9f0a6f8a-565b-4460-94e7-43053ca689d9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (ACS_OUT_PROT), şematik tarafından verilen ağla (/ACS_OUT_PROT) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [ACS_OUT_PROT] D1",
+                    "pos": {
+                        "x": 80.16,
+                        "y": 38.0
+                    },
+                    "uuid": "80d2c240-1660-4ea4-9d6f-b476fd7ad573"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Fuseholder_Cylinder-5x20mm_Bulgin_FX0456_Vertical_Closed, sembol tarafından verilen ayak iziyle (Fuse:Fuseholder_Cylinder-5x20mm_Bulgin_FX0456_Vertical_Closed) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi F1",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 20.0
+                    },
+                    "uuid": "a684cf37-0072-4123-82ed-efeb6d21bceb"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi F1",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 20.0
+                    },
+                    "uuid": "a684cf37-0072-4123-82ed-efeb6d21bceb"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (AC_L_IN), şematik tarafından verilen ağla (/AC_L_IN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [AC_L_IN] F1",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 20.0
+                    },
+                    "uuid": "0913f78e-25d4-4a6c-acc0-fd479f08ce21"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (AC_L_FUSED), şematik tarafından verilen ağla (/AC_L_FUSED) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [AC_L_FUSED] F1",
+                    "pos": {
+                        "x": 40.16,
+                        "y": 20.0
+                    },
+                    "uuid": "559e2c2e-7692-4b57-b6b3-5480e4780855"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm, sembol tarafından verilen ayak iziyle (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi J1",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 20.0
+                    },
+                    "uuid": "5176f8fb-5fc6-409a-9e1c-46627a1a1b4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi J1",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 20.0
+                    },
+                    "uuid": "5176f8fb-5fc6-409a-9e1c-46627a1a1b4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (AC_L_IN), şematik tarafından verilen ağla (/AC_L_IN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [AC_L_IN] J1",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 20.0
+                    },
+                    "uuid": "b5b1e9b3-0c74-4a51-943e-e0a39d692050"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (AC_N), şematik tarafından verilen ağla (/AC_N) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [AC_N] J1",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 20.0
+                    },
+                    "uuid": "919418e0-4777-44a1-864c-6b328cf4d834"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm, sembol tarafından verilen ayak iziyle (TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi J2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 85.0
+                    },
+                    "uuid": "e8d1b628-e8eb-4d8e-81f1-43d8a04cd6c9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi J2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 85.0
+                    },
+                    "uuid": "e8d1b628-e8eb-4d8e-81f1-43d8a04cd6c9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (AC_L_LOAD), şematik tarafından verilen ağla (/AC_L_LOAD) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [AC_L_LOAD] J2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 85.0
+                    },
+                    "uuid": "87aaf502-b433-4518-90b5-b29da7591445"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (AC_N), şematik tarafından verilen ağla (/AC_N) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [AC_N] J2",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 85.0
+                    },
+                    "uuid": "6ea0430e-c2b2-4ebf-90f4-13aeb632290e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "PinHeader_1x06_P2.54mm_Vertical, sembol tarafından verilen ayak iziyle (Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi J3",
+                    "pos": {
+                        "x": 150.0,
+                        "y": 66.0
+                    },
+                    "uuid": "02ee21ff-fde8-4f58-a5c9-44b77ed1a694"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi J3",
+                    "pos": {
+                        "x": 150.0,
+                        "y": 66.0
+                    },
+                    "uuid": "02ee21ff-fde8-4f58-a5c9-44b77ed1a694"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (EN), şematik tarafından verilen ağla (/EN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [EN] J3",
+                    "pos": {
+                        "x": 150.0,
+                        "y": 68.54
+                    },
+                    "uuid": "fc5be626-b517-4e6f-9e77-783480a7d8da"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GPIO0), şematik tarafından verilen ağla (/GPIO0) eşleşmiyor",
+            "items": [
+                {
+                    "description": "3'in Delik İçi Kaplamalı Geçit pedi [GPIO0] J3",
+                    "pos": {
+                        "x": 150.0,
+                        "y": 71.08
+                    },
+                    "uuid": "05f29373-3db0-4850-af80-24b1109cac61"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (UART_TX), şematik tarafından verilen ağla (/UART_TX) eşleşmiyor",
+            "items": [
+                {
+                    "description": "4'in Delik İçi Kaplamalı Geçit pedi [UART_TX] J3",
+                    "pos": {
+                        "x": 150.0,
+                        "y": 73.62
+                    },
+                    "uuid": "3ba478ca-ad47-4c64-878f-5cfee5ea1be9"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (UART_RX), şematik tarafından verilen ağla (/UART_RX) eşleşmiyor",
+            "items": [
+                {
+                    "description": "5'in Delik İçi Kaplamalı Geçit pedi [UART_RX] J3",
+                    "pos": {
+                        "x": 150.0,
+                        "y": 76.16
+                    },
+                    "uuid": "0a5c155c-0f93-4727-9c0e-58d2dc9cbe62"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal, sembol tarafından verilen ayak iziyle (Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi R1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 70.0
+                    },
+                    "uuid": "edd69f95-e679-4bbc-8965-babf36705e86"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi R1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 70.0
+                    },
+                    "uuid": "edd69f95-e679-4bbc-8965-babf36705e86"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (EN), şematik tarafından verilen ağla (/EN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [EN] R1",
+                    "pos": {
+                        "x": 110.16,
+                        "y": 70.0
+                    },
+                    "uuid": "1eaf421d-330b-4855-9bcc-e692dc269b30"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal, sembol tarafından verilen ayak iziyle (Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi R2",
+                    "pos": {
+                        "x": 125.0,
+                        "y": 70.0
+                    },
+                    "uuid": "c163ca08-acf0-4427-919b-c299e100bd9d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi R2",
+                    "pos": {
+                        "x": 125.0,
+                        "y": 70.0
+                    },
+                    "uuid": "c163ca08-acf0-4427-919b-c299e100bd9d"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (GPIO0), şematik tarafından verilen ağla (/GPIO0) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [GPIO0] R2",
+                    "pos": {
+                        "x": 135.16,
+                        "y": 70.0
+                    },
+                    "uuid": "4c621601-e95e-4b67-9c8e-70ab2f99dd33"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal, sembol tarafından verilen ayak iziyle (Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi R3",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 32.0
+                    },
+                    "uuid": "27271ce8-8185-45af-b521-5d3569667f45"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi R3",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 32.0
+                    },
+                    "uuid": "27271ce8-8185-45af-b521-5d3569667f45"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (ACS_OUT), şematik tarafından verilen ağla (/ACS_OUT) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [ACS_OUT] R3",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 32.0
+                    },
+                    "uuid": "52506d01-3728-4b40-91ac-7cb37a5c52b6"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (ACS_OUT_PROT), şematik tarafından verilen ağla (/ACS_OUT_PROT) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [ACS_OUT_PROT] R3",
+                    "pos": {
+                        "x": 80.16,
+                        "y": 32.0
+                    },
+                    "uuid": "18677906-aec8-46a4-a961-d67c855d72af"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "SW_PUSH_6mm, sembol tarafından verilen ayak iziyle (Button_Switch_THT:SW_PUSH_6mm) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi SW1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 86.0
+                    },
+                    "uuid": "b3c60b09-3abd-4026-a018-0d578ae92747"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi SW1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 86.0
+                    },
+                    "uuid": "b3c60b09-3abd-4026-a018-0d578ae92747"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (EN), şematik tarafından verilen ağla (/EN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [EN] SW1",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 86.0
+                    },
+                    "uuid": "02a4bc93-6101-4c28-afa5-d023c5cc9d7a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (EN), şematik tarafından verilen ağla (/EN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [EN] SW1",
+                    "pos": {
+                        "x": 106.5,
+                        "y": 86.0
+                    },
+                    "uuid": "141603db-9d87-4c4f-aeb9-3eaa883f68c0"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "SW_PUSH_6mm, sembol tarafından verilen ayak iziyle (Button_Switch_THT:SW_PUSH_6mm) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi SW2",
+                    "pos": {
+                        "x": 125.0,
+                        "y": 86.0
+                    },
+                    "uuid": "b1fbe229-8d51-440a-bcd5-187e423c893f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'Rating'",
+            "items": [
+                {
+                    "description": "Ayak İzi SW2",
+                    "pos": {
+                        "x": 125.0,
+                        "y": 86.0
+                    },
+                    "uuid": "b1fbe229-8d51-440a-bcd5-187e423c893f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (GPIO0), şematik tarafından verilen ağla (/GPIO0) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [GPIO0] SW2",
+                    "pos": {
+                        "x": 125.0,
+                        "y": 86.0
+                    },
+                    "uuid": "b69cf334-4fab-4ea5-8f3c-3a6fd9b5c059"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GPIO0), şematik tarafından verilen ağla (/GPIO0) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [GPIO0] SW2",
+                    "pos": {
+                        "x": 131.5,
+                        "y": 86.0
+                    },
+                    "uuid": "b2ea5f61-f757-4df5-b868-39fac42f23bf"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "ESP32-WROOM-32E, sembol tarafından verilen ayak iziyle (RF_Module:ESP32-WROOM-32E) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi U1",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 45.0
+                    },
+                    "uuid": "63425bb2-b7ec-4c27-b6f2-e630e6363db8"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi U1",
+                    "pos": {
+                        "x": 120.0,
+                        "y": 45.0
+                    },
+                    "uuid": "63425bb2-b7ec-4c27-b6f2-e630e6363db8"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (EN), şematik tarafından verilen ağla (/EN) eşleşmiyor",
+            "items": [
+                {
+                    "description": "3 için [EN] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 111.25,
+                        "y": 42.28
+                    },
+                    "uuid": "44865f04-5c5a-4507-89b1-aee67069c5e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (ACS_OUT_PROT), şematik tarafından verilen ağla (/ACS_OUT_PROT) eşleşmiyor",
+            "items": [
+                {
+                    "description": "4 için [ACS_OUT_PROT] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 111.25,
+                        "y": 43.55
+                    },
+                    "uuid": "d20ac389-f1f8-4492-92cc-1133c0049efc"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (GPIO0), şematik tarafından verilen ağla (/GPIO0) eşleşmiyor",
+            "items": [
+                {
+                    "description": "25 için [GPIO0] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 128.75,
+                        "y": 56.25
+                    },
+                    "uuid": "6557f9bb-4c42-4c2e-b364-dd3fc64f9ba6"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (RELAY_CTRL), şematik tarafından verilen ağla (/RELAY_CTRL) eşleşmiyor",
+            "items": [
+                {
+                    "description": "26 için [RELAY_CTRL] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 128.75,
+                        "y": 54.98
+                    },
+                    "uuid": "434269b0-53af-4bf1-bfa9-586208d7d783"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (UART_RX), şematik tarafından verilen ağla (/UART_RX) eşleşmiyor",
+            "items": [
+                {
+                    "description": "34 için [UART_RX] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 128.75,
+                        "y": 44.82
+                    },
+                    "uuid": "52b894ae-27e1-4093-b019-746ecd4bf96e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (UART_TX), şematik tarafından verilen ağla (/UART_TX) eşleşmiyor",
+            "items": [
+                {
+                    "description": "35 için [UART_TX] U1 ayak F.Cu",
+                    "pos": {
+                        "x": 128.75,
+                        "y": 43.55
+                    },
+                    "uuid": "62516ce7-22b2-418b-88cb-2e4f703c40ce"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "PinHeader_1x05_P2.54mm_Vertical, sembol tarafından verilen ayak iziyle (Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi U2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 58.0
+                    },
+                    "uuid": "4b3065a5-6bf3-417a-8c7f-c5c97d40c257"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi U2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 58.0
+                    },
+                    "uuid": "4b3065a5-6bf3-417a-8c7f-c5c97d40c257"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (ACS_OUT), şematik tarafından verilen ağla (/ACS_OUT) eşleşmiyor",
+            "items": [
+                {
+                    "description": "3'in Delik İçi Kaplamalı Geçit pedi [ACS_OUT] U2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 63.08
+                    },
+                    "uuid": "66107791-ebcb-4d64-8c0b-c2fd51dcf971"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (RELAY_NO_ACS_IPP), şematik tarafından verilen ağla (/RELAY_NO_ACS_IPP) eşleşmiyor",
+            "items": [
+                {
+                    "description": "4'in Delik İçi Kaplamalı Geçit pedi [RELAY_NO_ACS_IPP] U2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 65.62
+                    },
+                    "uuid": "e747b7e1-6191-4b6f-bfdf-45250a309596"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (AC_L_LOAD), şematik tarafından verilen ağla (/AC_L_LOAD) eşleşmiyor",
+            "items": [
+                {
+                    "description": "5'in Delik İçi Kaplamalı Geçit pedi [AC_L_LOAD] U2",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 68.16
+                    },
+                    "uuid": "b8a3ab51-4e7b-4648-ac06-8e30c5f5cda1"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "PinHeader_1x06_P2.54mm_Vertical, sembol tarafından verilen ayak iziyle (Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi U3",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 58.0
+                    },
+                    "uuid": "4d8d2039-392b-48fa-a858-616504e0fbbe"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi U3",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 58.0
+                    },
+                    "uuid": "4d8d2039-392b-48fa-a858-616504e0fbbe"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (RELAY_CTRL), şematik tarafından verilen ağla (/RELAY_CTRL) eşleşmiyor",
+            "items": [
+                {
+                    "description": "3'in Delik İçi Kaplamalı Geçit pedi [RELAY_CTRL] U3",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 63.08
+                    },
+                    "uuid": "cf6b313b-fa31-45ab-afcd-11b5b0887360"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (AC_L_FUSED), şematik tarafından verilen ağla (/AC_L_FUSED) eşleşmiyor",
+            "items": [
+                {
+                    "description": "4'in Delik İçi Kaplamalı Geçit pedi [AC_L_FUSED] U3",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 65.62
+                    },
+                    "uuid": "ea8713c1-34b9-4a6d-9777-656a95958142"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (RELAY_NO_ACS_IPP), şematik tarafından verilen ağla (/RELAY_NO_ACS_IPP) eşleşmiyor",
+            "items": [
+                {
+                    "description": "5'in Delik İçi Kaplamalı Geçit pedi [RELAY_NO_ACS_IPP] U3",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 68.16
+                    },
+                    "uuid": "b1174bde-e9ee-4fb4-866e-bf07c5bb2f1c"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "PinHeader_1x04_P2.54mm_Vertical, sembol tarafından verilen ayak iziyle (Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi U4",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 38.0
+                    },
+                    "uuid": "13147b87-9810-4a01-b585-d9f2cf54330a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi U4",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 38.0
+                    },
+                    "uuid": "13147b87-9810-4a01-b585-d9f2cf54330a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Ped ağı (AC_L_FUSED), şematik tarafından verilen ağla (/AC_L_FUSED) eşleşmiyor",
+            "items": [
+                {
+                    "description": "1'in Delik İçi Kaplamalı Geçit pedi [AC_L_FUSED] U4",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 38.0
+                    },
+                    "uuid": "1a395aa5-7139-415a-b07b-6a602ed9cbd7"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Ped ağı (AC_N), şematik tarafından verilen ağla (/AC_N) eşleşmiyor",
+            "items": [
+                {
+                    "description": "2'in Delik İçi Kaplamalı Geçit pedi [AC_N] U4",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 40.54
+                    },
+                    "uuid": "91372e14-c987-42c5-b400-b38ec55c49ba"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "PinHeader_1x03_P2.54mm_Vertical, sembol tarafından verilen ayak iziyle (Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical) eşleşmiyor",
+            "items": [
+                {
+                    "description": "Ayak İzi U5",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 20.0
+                    },
+                    "uuid": "48c5bc21-ea05-4de9-94bd-5997c19e0bef"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Ayak izinde eksik sembol alanı 'MPN'",
+            "items": [
+                {
+                    "description": "Ayak İzi U5",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 20.0
+                    },
+                    "uuid": "48c5bc21-ea05-4de9-94bd-5997c19e0bef"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Ayak İzi MH2",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 8.0
+                    },
+                    "uuid": "8e2054ef-784a-45db-9115-f19b7645aaa1"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Ayak İzi MH1",
+                    "pos": {
+                        "x": 12.0,
+                        "y": 102.0
+                    },
+                    "uuid": "9957a5b1-905f-4ce7-9fdd-463aaf021c25"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        }
+    ],
+    "source": "board.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}
